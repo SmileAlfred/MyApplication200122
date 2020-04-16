@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:gravity="left"
+        android:text="实现 View 的滑动\n1. layout() \n2. offsetLeftAndRight() + offsetTopAndBottom() "
+        android:textAllCaps="false"
+        android:textColor="#000"
+        android:textSize="20sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="left"
+        android:text="注：此时的点击事件是在View中设置的，故只有点击这个View才会跟着移动\n
+        注：View动画不会改变动画属性；scrollBy 参数设置的是 负数向右下"
+        android:textAllCaps="false"
+        android:textColor="#000"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/ic_launcher_background">
+
+
+        <com.example.myapplication200122.slideview.LayoutSlideView
+            android:id="@+id/slide_view_animate"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="#ffff00" />
+
+    </LinearLayout>
+</LinearLayout>

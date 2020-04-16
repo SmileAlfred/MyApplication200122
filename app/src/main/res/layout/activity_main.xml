@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="15dp"
+    android:background="#fff"
+    android:orientation="vertical">
+
+    <com.example.myapplication200122.utils.TitleLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/layout_view_slide"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="20dp"
+                android:text="进阶S3.3 layout()→View滑动"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/tab_layout_test"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="20dp"
+                android:text="进阶S2 TabLayout实现选项卡"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/best_launch_activity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="20dp"
+                android:text="2.6.3 启动活动的最佳写法" />
+
+            <Button
+                android:id="@+id/list_view_test"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="20dp"
+                android:text="3.5.1 ListViewTest" />
+
+            <Button
+                android:id="@+id/best_list_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="20dp"
+                android:text="3.5.1 水果list view实践" />
+
+            <Button
+                android:id="@+id/best_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="20dp"
+                android:text="3.6 水果recycler view实践" />
+
+            <Button
+                android:id="@+id/broadcast_offline_test"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="20dp"
+                android:text="5.5 广播强制下线" />
+
+            <Button
+                android:id="@+id/file_persistence_test"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="20dp"
+                android:text="6.2 文件存储" />
+
+            <Button
+                android:id="@+id/shared_preference_pers_test"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="20dp"
+                android:text="6.3 SharedPreference存储" />
+
+            <Button
+                android:id="@+id/data_base_test"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="20dp"
+                android:text="6.4 数据库存储" />
+
+            <Button
+                android:id="@+id/lite_pal_test"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="20dp"
+                android:text="6.5 LitePal" />
+
+            <Button
+                android:id="@+id/provider_test"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="20dp"
+                android:text="7.23 内容提供器" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

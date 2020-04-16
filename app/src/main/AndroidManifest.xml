@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.myapplication200122">
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <application
+        android:name="org.litepal.LitePalApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".LitePalTest"></activity>
+        <activity android:name=".DataBaseTest" />
+        <activity android:name=".SharedPreferenceTest" />
+        <activity android:name=".bestlaunchactivity.BestLaunchActivity" />
+        <activity android:name=".LunchActivity" />
+        <activity android:name=".BestListView" />
+        <activity android:name=".BestRecyclerView" />
+        <activity android:name=".BroadcastOfflineTest" />
+        <activity android:name=".BroadcastOfflineSend" />
+        <activity android:name=".ListViewTest" />
+        <activity android:name=".FilePersistenceTest" />
+        <activity android:name=".provider_test.ProviderTest" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".tablayout_test.TabLayoutTest" />
+        <activity android:name=".slideview.LayoutSlideActivity" />
+    </application>
+
+</manifest>

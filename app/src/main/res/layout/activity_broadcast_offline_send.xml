@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="52dp"
+        android:paddingLeft="25dp"
+        android:paddingBottom="50dp"
+        android:text="这是模拟挤下线页面"
+        android:textSize="25sp" />
+
+    <Button
+        android:id="@+id/offline_send_button"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="wrap_content"
+        android:text="发送下线广播" />
+
+</LinearLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="15dp"
+    android:orientation="vertical"
+    tools:context=".LitePalTest">
+
+    <com.example.myapplication200122.utils.TitleLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/create_lite_data_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Create" />
+
+    <Button
+        android:id="@+id/add_lite_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add_Data" />
+
+    <Button
+        android:id="@+id/update_lite_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Update_Data" />
+
+    <Button
+        android:id="@+id/delete_lite_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Delete_Data" />
+
+    <Button
+        android:id="@+id/query_lite_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Query_Data" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:gravity="center"
+        android:text="书名|作者|页数|价格"
+        android:textColor="#000"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/text_lite_data_base"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="15dp"
+        android:hint="都有这些书籍"
+        android:textColor="#000"
+        android:textSize="16sp" />
+
+</LinearLayout>
