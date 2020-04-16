@@ -20,6 +20,7 @@ import java.util.List;
  * 创建相应的 TabLayout 和 Fragment，
  * 设置 ViewPager 适配器和 TabLayout 适配器，
  * 将TabLayout和ViewPager关联起来
+ * 不足：滑动页面时，字体颜色不随之改变；
  * @date :2020/04/14 11:06
  */
 public class TabLayoutTest extends AppCompatActivity {

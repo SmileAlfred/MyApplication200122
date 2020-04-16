@@ -97,10 +97,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.provider_test:
                 intent = new Intent(this, ProviderTest.class);
+                break;
             case R.id.tab_layout_test:
                 intent = new Intent(this, TabLayoutTest.class);
+                break;
             case R.id.layout_view_slide:
                 intent = new Intent(this, LayoutSlideActivity.class);
+                break;
             default:
                 break;
         }
