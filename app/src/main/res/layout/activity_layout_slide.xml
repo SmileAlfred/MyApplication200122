@@ -2,35 +2,43 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/ic_launcher_background"
     android:orientation="vertical">
-
+<com.example.myapplication200122.utils.TitleLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"/>
     <TextView
         android:layout_width="match_parent"
+        android:id="@+id/layout_slide_note1"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
         android:gravity="left"
         android:text="实现 View 的滑动\n1. layout() \n2. offsetLeftAndRight() + offsetTopAndBottom() "
+        android:visibility="gone"
         android:textAllCaps="false"
+        android:background="#fff"
         android:textColor="#000"
         android:textSize="20sp" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/layout_slide_note2"
         android:layout_marginLeft="20dp"
+        android:visibility="gone"
         android:layout_marginRight="20dp"
         android:gravity="left"
         android:text="注：此时的点击事件是在View中设置的，故只有点击这个View才会跟着移动\n
         注：View动画不会改变动画属性；scrollBy 参数设置的是 负数向右下"
         android:textAllCaps="false"
+        android:background="#fff"
         android:textColor="#000"
         android:textSize="16sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="5dp"
-        android:background="@drawable/ic_launcher_background">
+        android:layout_marginTop="5dp">
 
 
         <com.example.myapplication200122.slideview.LayoutSlideView
