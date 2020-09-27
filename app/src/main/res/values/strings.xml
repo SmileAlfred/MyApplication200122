@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">MyApplication200122</string>
+    <string name="app_name">MyApp200122</string>
+    <string name="button_View滑动">进阶S3.3 layout()→View滑动</string>
+    <string name="button_TabLayout">进阶S2 TabLayout实现选项卡</string>
 </resources>

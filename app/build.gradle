@@ -9,7 +9,7 @@ android {
     buildToolsVersion "29.0.2"
     defaultConfig {
         applicationId "com.example.myapplication200122"
-        minSdkVersion 15
+        minSdkVersion 19
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
@@ -21,6 +21,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
 }
 
 dependencies {
@@ -34,6 +35,9 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     implementation 'androidx.recyclerview:recyclerview:1.2.0-alpha01'
     implementation 'org.litepal.android:java:3.0.0'
+    //noinspection GradleCompatible
     implementation 'com.android.support:design:28.0.0'
     implementation 'androidx.cardview:cardview:1.0.0'
+    //给定WiFi名称连接指定WiFi：https://github.com/tangjiang24/WifiConnector/
+    implementation 'com.github.tangjiang24:WifiConnector:2.0'
 }

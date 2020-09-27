@@ -1,37 +1,41 @@
 package com.example.myapplication200122;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.res.Configuration;
+import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 
+import com.example.myapplication200122.auto_connect_wifi.AutoConnectWifiActivity;
 import com.example.myapplication200122.bestlaunchactivity.BestLaunchActivity;
+import com.example.myapplication200122.connect_the_wifi.ConnectTheWifiActivity;
+import com.example.myapplication200122.investdemo.InvestDemo;
+import com.example.myapplication200122.listen_wifi_statte.ListenWifiStateActivity;
 import com.example.myapplication200122.provider_test.ProviderTest;
 import com.example.myapplication200122.slideview.LayoutSlideActivity;
-import com.example.myapplication200122.slideview.LayoutSlideView;
 import com.example.myapplication200122.tablayout_test.TabLayoutTest;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private Button bestLaunchActivity;
-    private Button listViewTest;
-    private Button bestListView;
-    private Button bestRecyclerView;
-    private Button broadcastOfflineTest;
-    private Button filePersistenceTest;
-    private Button sharedPreferenceTest;
-    private Button dataBaseTest;
-    private Button litePalTest;
-    private Button providerTest;
-    private Button tabLayoutTest;
-    private Button layoutViewSlide;
+    private Button bestLaunchActivity, listViewTest, bestListView, bestRecyclerView, broadcastOfflineTest, filePersistenceTest,
+            sharedPreferenceTest, dataBaseTest, litePalTest, providerTest, tabLayoutTest, layoutViewSlide, auto_connect_wifi,
+            connect_the_wifi,listen_wifi_state;
+    private LinearLayout ll;
+    private static final String TAG = MainActivity.class.getSimpleName();
+    private Button invest_demo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         findViews();
+        Log.i(TAG, "onCreate: ");
     }
 
     private void findViews() {
@@ -49,6 +53,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         providerTest = findViewById(R.id.provider_test);
         tabLayoutTest = findViewById(R.id.tab_layout_test);
         layoutViewSlide = findViewById(R.id.layout_view_slide);
+        invest_demo = findViewById(R.id.invest_demo);
+        auto_connect_wifi = findViewById(R.id.auto_connect_wifi);
+        connect_the_wifi = findViewById(R.id.connect_the_wifi);
+        listen_wifi_state = findViewById(R.id.listen_wifi_state);
+
+
+        ll = findViewById(R.id.turn_ll);
 
         bestLaunchActivity.setOnClickListener(this);
         listViewTest.setOnClickListener(this);
@@ -62,6 +73,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         providerTest.setOnClickListener(this);
         tabLayoutTest.setOnClickListener(this);
         layoutViewSlide.setOnClickListener(this);
+        invest_demo.setOnClickListener(this);
+        auto_connect_wifi.setOnClickListener(this);
+        connect_the_wifi.setOnClickListener(this);
+        listen_wifi_state.setOnClickListener(this);
     }
 
     @Override
@@ -104,9 +119,38 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.layout_view_slide:
                 intent = new Intent(this, LayoutSlideActivity.class);
                 break;
+            case R.id.invest_demo:
+                intent = new Intent(this, InvestDemo.class);
+                break;
+            case R.id.auto_connect_wifi:
+                intent = new Intent(this, AutoConnectWifiActivity.class);
+                break;
+            case R.id.connect_the_wifi:
+                intent = new Intent(this, ConnectTheWifiActivity.class);
+                break;
+            case R.id.listen_wifi_state:
+                intent = new Intent(this, ListenWifiStateActivity.class);
+                break;
             default:
                 break;
         }
         startActivity(intent);
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
+    @Override
+    public void onConfigurationChanged(@NonNull Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            if (ll.getOrientation() == LinearLayout.VERTICAL) {
+                ll.setOrientation(LinearLayout.HORIZONTAL);
+            }
+        } else if (newConfig.orientation == Configuration.ORIENTATION_PORTRAIT) {
+            if (ll.getOrientation() == LinearLayout.HORIZONTAL) {
+                ll.setOrientation(LinearLayout.VERTICAL);
+            }
+        } else {
+            Log.i(TAG, "onConfigurationChanged: 小朋友，你是否有很多问号？？？");
+        }
     }
 }
